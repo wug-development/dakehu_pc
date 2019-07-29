@@ -1,0 +1,155 @@
+@import 'quote/public.scss';
+.orderinfo-box{
+    .orderinfo-box-title{
+        margin-top: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 20px;
+        position: relative;
+        background-color: #fff;
+        padding: 25px 0 25px 25px;
+        box-sizing: border-box;
+        letter-spacing: 1;
+        span{
+            color: #fe7122;
+            font-size: 14px;
+        }
+    }
+    .orderinfo-box-title::before{
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 26px;
+        height: 18px;
+        border: 1.5px solid $pubcolor;
+        box-sizing: border-box;
+    }
+    .orderinfo-box-body{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 30px;
+        background-color: #fff;
+        box-sizing: border-box;
+        .icon-back{
+            height: 22px;
+            background: url('../images/icon-left.png') no-repeat left center;
+        }
+        .person-list{
+            margin-top: 50px;
+            width: 720px;
+            text-align: center;
+            th{
+                background-color: $pubcolor;
+                color: #fff;
+                height: 50px;
+                font-weight: normal;
+            }
+            td{
+                box-sizing: border-box;
+                border-bottom: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                height: 50px;
+            }
+            td:nth-child(odd){
+                width: 150px;
+            }
+            td:nth-child(even){
+                width: 210px;
+            }
+            td:first-child{
+                border-left: 1px solid #ccc;
+            }
+        }
+        .gn-box{
+            .detail{
+                margin-top: 30px;
+                width: 100%;
+                tr:first-child td{
+                    border-top: 1px solid #ccc;
+                }
+                td{
+                    height: 50px;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                    box-sizing: border-box;
+                }
+                td:nth-child(1){
+                    border-left: 1px solid #ccc;
+                }
+                td:nth-child(odd){
+                    text-align: center;
+                    background-color: #f1f1f1;
+                    width: 170px;
+                }
+                td:nth-child(even){
+                    width: 400px;
+                    padding-left: 20px;
+                }
+            }
+        }
+        .gj-box{
+            .detail{
+                width: 100%;
+                margin-top: 20px;
+                td{
+                    height: 40px;
+                    span{
+                        color: #67aef3;
+                    }
+                    label{
+                        color: #fe7122;
+                    }
+                }
+                td:nth-child(odd){
+                    width: 100px;
+                }
+            }
+            .other{
+                margin-top: 20px;
+                display: flex;
+                div{                    
+                    width: 100px;
+                    line-height: 20px;
+                }
+                .txt{
+                    width: 800px;
+                    border: 1px solid #ccc;
+                    min-height: 80px;
+                    padding: 5px 15px;
+                    box-sizing: border-box;
+                    color: #666;
+                    line-height: 30px;
+                    background-color: #f8f8f8;
+                }
+            }
+            .flight{
+                margin-top: 30px;
+                display: flex;
+                div{                    
+                    width: 100px;
+                    line-height: 20px;
+                }
+                .flight-list{
+                    width: 940px;
+                    td:nth-child(odd){
+                        width: auto;
+                    }
+                    td:nth-child(even){
+                        width: auto;
+                    }
+                }
+            }
+            .person{
+                margin-top: 30px;
+                display: flex;
+                div{                    
+                    width: 100px;
+                    line-height: 20px;
+                }
+            }
+            .person-list{
+                margin: 0;
+            }
+        }
+    }
+}

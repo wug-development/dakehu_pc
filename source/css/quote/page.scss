@@ -1,0 +1,49 @@
+/* 外面盒子样式---自己定义 */
+.page_div{
+    margin:20px 10px 20px 0;
+    color:#666;
+    text-align: center;
+    /* 页数按钮样式 */
+    button{
+        display:inline-block;
+        min-width:30px;
+        height:28px;
+        cursor:pointer;
+        color:#666;
+        font-size:13px;
+        line-height:28px;
+        background-color:#f9f9f9;
+        border:1px solid #dce0e0;
+        text-align:center;
+        margin:0 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    #firstPage, #lastPage, #nextPage, #prePage{
+        width:50px;
+        color:$pubcolor;
+        border:1px solid $pubcolor
+    }
+    #nextPage, #prePage{
+        width:70px;
+    }
+    .current{
+        background-color:$pubcolor;
+        border-color:$pubcolor;
+        color:#FFF;
+    }
+    /* 页面数量 */
+    .totalPages{
+        margin:0 10px;
+    }
+    .totalPages span,.totalSize span{
+        color:$pubcolor;
+        margin:0 5px;
+    }
+    /*button禁用*/
+    button:disabled{
+        opacity:.5;
+        cursor:no-drop;
+    }
+}

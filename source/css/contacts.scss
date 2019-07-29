@@ -1,0 +1,63 @@
+@import 'quote/public.scss';
+.contacts-box{
+    .contacts-box-body{
+        background: url('../images/passenger-bg.png') no-repeat bottom center;
+        background-size: auto 978px;
+        height: 978px;
+        padding-top: 50px;
+        box-sizing: border-box;
+        .contacts-box-body-white{
+            background-color: #fff;
+            height: 740px;
+            box-sizing: border-box;
+            padding: 30px;
+            box-shadow: 2px 2px 5px #ccc;
+            .contacts-title{
+                font-size: 16px;
+                font-weight: bold;
+                height: 20px;
+                line-height: 20px;
+                position: relative;
+            }
+            .contacts-title::before{
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: 1px;
+                height: 18px;
+                border: 1.5px solid $pubcolor;
+                box-sizing: border-box;
+            }
+            .contacts-search-box{
+                margin-top: 25px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 25px;
+                box-sizing: border-box;
+                display: flex;
+                input{
+                    height: 40px;
+                    line-height: 38px;
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                    color: #666;
+                    font-size: 14px;
+                    width: 400px;
+                    margin-right: 50px;
+                    border-radius: 5px;
+                    border: 1px solid #ccc;
+                }
+                .btn{
+                    height: 40px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    width: 100px;
+                    box-sizing: border-box;
+                    box-shadow: 1px 1px 6px #999;
+                }
+            }
+            @import 'quote/tablelist.scss';
+        }
+        @import 'quote/page.scss';
+    }
+}

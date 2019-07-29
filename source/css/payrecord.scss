@@ -1,0 +1,80 @@
+@import 'quote/public.scss';
+.payrecord-box{
+    .payrecord-box-body{
+        background: url('../images/passenger-bg.png') no-repeat bottom center;
+        background-size: auto 1100px;
+        height: 1100px;
+        padding-top: 50px;
+        box-sizing: border-box;
+        .payrecord-money-box{
+            height: 128px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            .money{
+                width: 274px;
+                background-color: #fff;
+                box-sizing: border-box;
+                display: flex;
+                .icon-fukuan{
+                    width: 112px;
+                    background: url('../images/icon-money_1.png') no-repeat center;
+                    background-color: #ff9979;
+                }
+                .icon-qiankuan{
+                    width: 112px;
+                    background: url('../images/icon-money_2.png') no-repeat center;
+                    background-color: #6ec7e5;
+                }
+                .icon-xinyong{
+                    width: 112px;
+                    background: url('../images/icon-money_3.png') no-repeat center;
+                    background-color: #bda7e2;
+                }
+                .icon-jiesuan{
+                    width: 112px;
+                    background: url('../images/icon-money_4.png') no-repeat center;
+                    background-color: #83cec9;
+                }
+                div{
+                    padding-left: 15px;
+                    div{
+                        padding: 32px 0 18px 0;
+                        color: $pubcolor;
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        .payrecord-box-body-white{
+            background-color: #fff;
+            min-height: 770px;
+            box-sizing: border-box;
+            padding: 30px;
+            box-shadow: 2px 2px 5px #ccc;
+            .payrecord-title{
+                font-size: 16px;
+                font-weight: bold;
+                height: 20px;
+                line-height: 20px;
+                position: relative;
+            }
+            .payrecord-title::before{
+                content: "";
+                position: absolute;
+                left: -10px;
+                top: 1px;
+                height: 18px;
+                border: 1.5px solid $pubcolor;
+                box-sizing: border-box;
+            }
+            .green{
+                color: $pubcolor;
+            }
+            @import 'quote/tablelist.scss';            
+        }
+        @import 'quote/page.scss';
+    }
+}

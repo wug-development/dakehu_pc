@@ -1,0 +1,208 @@
+@import 'quote/public.scss';
+.index-box{
+    .banner{
+        background-image: url('../images/userinfo-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 476px;
+        display: block;
+    }
+    .xinyong{
+        background-image: url('../images/userinfo-xinyong.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 476px;
+        display: block;
+        .xinyongjiesuan{
+            width: 2px;
+            margin: 0 auto;
+            position: relative;
+            .circular{
+                width: 170px;
+                height: 170px;
+                border-radius: 300px;
+                background-color: $pubcolor;
+                position: absolute;
+                font-size: 18px;
+                color: #000;
+                text-align: center;
+                padding-top: 45px;
+                box-sizing: border-box;
+                font-weight: bold;
+                div{
+                    font-size: 24px;
+                    color: #fff;
+                    margin-top: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+            .xyed{
+                top: 50px;
+                left: -420px;
+            }
+            .jszq{
+                top: 120px;
+                right: -420px;
+            }
+        }
+    }
+    .info-title{
+        width: 638px;
+        padding-top: 45px;
+        margin: 0 auto;
+        text-align: center;
+        .info-title-name{
+            font-family: '黑体', sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+        }
+        .info-title-other{
+            margin-top: 10px;
+            font-size: 14px;
+            height: 12px;
+            color: #8d8d8d;
+            border-bottom: 1px solid #8d8d8d;
+            div{
+                width: 200px;
+                margin: 0 auto;
+                background-color: #fff;
+                position: relative;
+            }
+            ::before{
+                content: '';
+                display: block;
+                position: absolute;
+                left: 80px;
+                top: 40px;
+                width: 40px;
+                border-bottom: 3px solid $pubcolor;
+            }
+        }
+    }
+    .logininfo{
+        height: 410px;
+        background-color: #fff;
+        .logininfo-tab{
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+            .tab-box{
+                width: 580px;
+                height: 153px;
+                background-color: #fff;
+                padding-left: 230px;
+                padding-top: 30px;
+                box-sizing: border-box;
+                font-size: 16px;
+                color: #000;
+                font-family: '黑体', sans-serif;
+                font-weight: bold;
+                div{
+                    width: 75px;
+                    position: relative;
+                }
+                div::after{
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    right: -35px;
+                    display: block;
+                    width: 40px;
+                    border-bottom: 1px solid $pubcolor;
+                }
+                span{
+                    font-size: 26px;
+                    color: #7a7b7b;
+                    display: block;
+                    margin-top: 25px;
+                }
+            }
+            .account{
+                background: url('../images/icon-userinfo-account.png') no-repeat left;
+            }
+            .pass{
+                background: url('../images/icon-userinfo-pass.png') no-repeat left;
+            }
+        }
+    }
+    .linkmaninfo{
+        height: 596px;
+        background-color: #f3f3f3;
+        .info-title-other{
+            div{
+                background-color: #f3f3f3;
+            }
+        }
+        .cards-box{
+            margin-top: 80px;
+            .swiper-slide{
+                height: 332px;
+                background: url('../images/bg-userinfo.png') no-repeat top center;
+                .card{
+                    position: relative;
+                    width: 976px;
+                    height: 328px;
+                    margin: 0 auto;
+                    table{
+                        position: absolute;
+                        right: 100px;
+                        top: 60px;
+                        th{
+                            font-size: 20px;
+                            color: #000;
+                            font-weight: bold;
+                            text-align: left;
+                            height: 40px;
+                        }
+                        td{
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .company{
+        background-color: #f3f3f3;
+        padding-bottom: 40px;
+        .info-title-other{
+            div{
+                background-color: #f3f3f3;
+            }
+        }
+        .branch-office-box{
+            margin-top: 100px;
+            li{
+                padding: 10px 20px;
+                box-sizing: border-box;
+                border: 1px dotted #ccc;
+                display: flex;
+                flex-wrap: wrap;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                span{
+                    display: inline-block;
+                    width: 75px;
+                    text-align: right;
+                }
+                .w25{
+                    width: 250px;
+                }
+                .w18{
+                    width: 180px;
+                }
+                .w90{
+                    width: 900px;
+                }
+            }
+            .cur{
+                border: 1px solid $pubcolor;
+                color: $pubcolor;
+                box-shadow: 2px 2px 5px #ccc;
+            }
+        }
+    }
+
+}

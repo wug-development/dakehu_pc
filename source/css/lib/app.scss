@@ -1,0 +1,122 @@
+@import '../quote/public.scss';
+
+/* 全局 */
+*{outline: none;}
+body,div,p,ul,li,table,tbody,tr,td,textarea,form,input,h1,h2,h3,h4,h5,dl,dt,dd,img,iframe,header,nav,section,article,footer,figure,figcaption,menu{ margin:0; padding:0; list-style:none; }
+html,body{ font-family: "pingfang", "Microsoft YaHei", "SimHei", sans-serif; -webkit-user-select:none; -webkit-text-size-adjust:none; line-height:25px; font-size: 14px; color: #444; display: block; min-height: 100%;background: #f3f3f3; }
+a{ text-decoration:none; color: inherit; }
+header,nav,section,article,footer,figure,figcaption{ display:block; }
+ol,ul { margin:0; padding:0; }
+input[type=text],input[type=password],input[type=number],input[type=tel],textarea{ border: 0; height: 100%; }
+textarea{ min-height:70px; line-height: 25px; }
+.clear{clear: both;}
+.boxwidth{ width: 1200px; margin: 0 auto; }
+.pubbtn{ padding: 5px 30px; line-height: 20px; background-color: $pubcolor; text-align: center; color: #fff; cursor: pointer; a{ display: block; height: 100%; } }
+.pubbtn:hover{ background-color: $pubcolorhover; } 
+.box-shadow{ box-shadow: 2.4px 2.4px 4px #ddd; }
+
+/********header start***************************/
+.pubheader{
+    background-color: #fff;
+    height: 70px;
+    .pubheader-box{
+        width: $body-width;
+        margin: 0 auto;        
+        .logo{
+            float: left;
+            padding-top: 8px;
+        }
+        .name-box{
+            float: right;
+            height: 70px;
+            line-height: 70px;
+            .name{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/********header end***************************/
+
+/********menu start***************************/
+.pubmenu{
+    background-color: $pubcolor;
+    height: 52px;
+    line-height: 52px;
+    .menubox{
+        width: 1200px;
+        display: flex;
+        margin: 0 auto;
+        li{
+            height: 100%;
+            padding: 0 30px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            span{
+                color: #fae494;
+            }
+        }
+        .cur{
+            background-color: #fff;
+            color: $pubcolor;
+        }
+    }
+}
+/********menu end***************************/
+
+/***footer start **************************/
+.pubfooter{
+    background-color: #fff;
+    height: 120px;
+    .footerbox{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-top: 36px;
+        box-sizing: border-box;
+        .footerbox-beian{
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            height: 50px;
+            div{
+                padding: 5px 10px;
+                box-sizing: border-box;
+                line-height: 20px;
+            }
+            div:first-child{
+                border-right: 1px solid #ccc;
+                padding-top: 8px;
+                box-sizing: border-box;
+                width: 50px;
+                text-align: center;
+            }
+        }
+        .footerbox-info{
+            margin-left: 30px;    
+            text-align: center;
+        }
+    }
+}
+/***footer end **************************/
+input.txts{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ccc;
+    text-indent: 1em;
+}
+div.btn{
+    width: 150px;
+    line-height: 30px;
+    background-color: $pubcolor;
+    text-align: center;
+    color: #fff;
+    border: 1px solid $pubcolor;
+    cursor: pointer;
+    a{
+        display: block;
+        height: 100%;
+    }
+}

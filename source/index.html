@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>凯行网 - 大客户</title>
+        @@include('publicpage/meta.html')
+        <link rel="stylesheet" type="text/css" href="css/index.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/lib/layui.min.css"/>
+    </head>
+    <body class="index-box layui-form">
+        @@include('publicpage/header.html')
+        @@include('publicpage/menu.html', {"t": "index"})
+
+        <div class="banner"></div>
+
+        <div class="boxwidth bookbox">
+            <div class="tab">
+                <div data-type="gn">预订国内</div>
+                <div data-type="gj" class="cur">预订国际</div>
+            </div>
+            <div class="padding">
+                <div class="menu">
+                    <div class="go cur">单程</div>
+                    <div class="return">往返</div>
+                    <div class="made">定制</div>
+                </div>
+                <div class="go-return-box">
+                    <div class="out"><select name="modules" lay-verify="required" lay-search=""><option value="">出发地</option></select></div>
+                    <div class="daoda"><select name="modules" lay-verify="required" lay-search=""><option value="">目的地</option></select></div>
+                    <div class="outdate"><input type="text" name="date" id="date" lay-verify="date" placeholder="出发日期" autocomplete="off" class="layui-input"></div>
+                    <div class="daodadate"><input type="text" class="txt" placeholder="到达日期"></div>
+                    <div class="btn"><a href="flightlist.html">搜索</a></div>
+                </div>
+                <div class="made-box">
+                    <div class="text-box">
+                        <textarea id="txt_made" cols="30" rows="10" placeholder="请尽量详细描述您的航班需求，以便我们能更好为您量身设计行程！"></textarea>
+                    </div>
+                    <div class="btn">搜索</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="todayorder boxwidth">
+            <div class="todayorder-title">今日订单</div>
+            <table class="todayorder-list" cellpadding="0" cellspacing="0">
+                <thead>
+                    <th>订单号</th>
+                    <th>乘机人</th>
+                    <th>出发日期</th>
+                    <th>行程</th>
+                    <th>记录编号</th>
+                    <th>金额</th>
+                    <th>预定时间</th>
+                    <th>状态</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td class="red">111</td>
+                    </tr>
+                    <tr>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                    </tr>
+                    <tr>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td>111</td>
+                        <td class="red">111</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        @@include('publicpage/footer.html')
+        <script src="js/lib/layui.min.js"></script>
+        <script src="js/index.min.js"></script>
+    </body>
+</html>

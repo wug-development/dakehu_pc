@@ -1,0 +1,165 @@
+> .tab{
+    display: flex;
+    > div{
+        height: 40px;
+        width: 200px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    > .cur{
+        background-color: #fff;
+        color: $pubcolor;
+    }
+}
+> .padding{
+    padding: 0 30px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 5px 20px #ccc;
+    .menu{
+        height: 70px;
+        line-height: 70px;
+        display: flex;
+        div{
+            width: 100px;
+            padding-left: 40px;
+            color: #a8a7a7;
+            cursor: pointer;
+        }
+        .cur{
+            color: $pubcolor;
+        }
+        .go{
+            background: url('../images/icon_book_go.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+        .go.cur{
+            background: url('../images/icon_book_go_cur.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+        .return{
+            background: url('../images/icon_book_return.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+        .return.cur{
+            background: url('../images/icon_book_return_cur.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+        .made{
+            background: url('../images/icon_book_made.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+        .made.cur{
+            background: url('../images/icon_book_made_cur.png') no-repeat;
+            background-position: 5px center;
+            background-size: 24px auto;
+        }
+    }
+    .go-return-box{
+        display: flex;
+        flex-wrap: wrap;
+        height: 110px;
+        padding-bottom: 70px;
+        box-sizing: border-box;
+        > div {
+            margin-right: 40px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 240px;
+            height: 40px;
+            padding: 5px 0;
+            margin-bottom: 15px;
+            input{
+                width: 200px;
+                height: 30px;
+                box-sizing: border-box;
+                border-right: 1px solid #ccc;
+                text-indent: 1rem;
+                padding: 0;
+                margin: 0;
+            }
+            .layui-edge{
+                display: none;
+            }
+        }
+        .out{
+            background: url('../images/icon_book_out.png') no-repeat;
+            background-position: 208px center;
+            background-size: 20px auto;
+        }
+        .daoda{
+            position: relative;
+            background: url('../images/icon_book_destination.png') no-repeat;
+            background-position: 208px center;
+            background-size: 20px auto;
+        }
+        .daoda::before{
+            content: ' ';
+            position: absolute;
+            left: -31px;
+            top: 10px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url('../images/icon_goback.png') no-repeat;
+            background-position: center center;
+            background-size: 20px auto;
+        }
+        .outdate{
+            background: url('../images/icon_book_outdate.png') no-repeat;
+            background-position: 208px center;
+            background-size: 20px auto;
+        }
+        .daodadate{
+            display: none;
+            background: url('../images/icon_book_outdate.png') no-repeat;
+            background-position: 208px center;
+            background-size: 20px auto;
+        }
+    }
+    div.btn{
+        width: 150px;
+        line-height: 30px;
+        background-color: $pubcolor;
+        text-align: center;
+        color: #fff;
+        border: 1px solid $pubcolor;
+        cursor: pointer;
+        a{
+            display: block;
+            height: 100%;
+        }
+    }
+    .btn:hover{
+        background-color: $pubcolorhover;
+    }
+    .made-box{
+        display: none;
+        height: auto;
+        padding-bottom: 20px;
+        .text-box{
+            border: 1px solid #ccc;
+            textarea{
+                resize: none;
+                border: 0;
+                width: 100%;
+                height: 120px;
+                display: block;
+                padding: 5px 10px;
+                color: #666;
+                box-sizing: border-box;
+            }
+            textarea::placeholder{
+                color: #999;
+            }
+        }
+    }
+}

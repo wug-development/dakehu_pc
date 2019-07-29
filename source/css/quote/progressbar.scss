@@ -1,0 +1,47 @@
+.progressbar{
+    height: 70px;
+    background-color: #fff;
+    padding-top: 10px;
+    box-sizing: border-box;
+    .barnum{
+        margin: 0 auto;
+        width: 720px;
+        height: 25px;
+        border-bottom: 1px solid #fe7122;
+        display: flex;
+        justify-content: space-between;
+        > div {
+            background-color: #fff;
+            width: 100px;
+            height: 50px;
+            line-height: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding-top: 5px;
+            padding-left: 10px;
+            box-sizing: border-box;
+            > div {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                background-color: #f3f3f3;
+                line-height: 40px;
+                color: #fe7122;
+                font-size: 16px;
+                box-shadow: 2px 2px 4px #e6e6e6;
+            }
+            span{
+                width: 50px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+        > .cur{
+            > div{
+                background-color: #fe7122;
+                color: #fff;
+            }                
+        }
+    }
+}

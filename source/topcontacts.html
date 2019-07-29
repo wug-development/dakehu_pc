@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <title>凯行网 - 常用乘机人</title>
+        @@include('publicpage/meta.html')
+        <link rel="stylesheet" type="text/css" href="css/contacts.min.css"/>
+    </head>
+    <body class="contacts-box">
+        @@include('publicpage/header.html')
+        @@include('publicpage/menu.html', {"t": "contact"})
+        
+        <div class="contacts-box-body">
+            <div class="boxwidth contacts-box-body-white">
+                <div class="contacts-title">乘机人查询</div>
+                <div class="contacts-search-box">
+                    <input type="search" placeholder="请输入姓名、公司名称进行搜索" maxlength="50" />
+                    <div class="pubbtn btn">搜索</div>
+                </div>
+                <table class="table-list" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <th>姓名</th>
+                        <th>公司名称</th>
+                        <th>乘机人手机</th>
+                        <th>紧急人手机</th>
+                        <th>证件号码</th>
+                        <th>护照号</th>
+                        <th>护照有效期</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boxwidth">
+                <div id="page" class="page_div"></div>
+            </div>
+        </div>
+
+        @@include('publicpage/footer.html')
+        <script type="text/javascript" src="js/lib/page.min.js"></script>
+        <script>
+            // pageMe.js 使用方法
+            $("#page").paging({
+                pageNum: 5, // 当前页面
+                totalNum: 14, // 总页码
+                totalList: 300, // 记录总数量
+                callback: function (num) { //回调函数
+                    console.log(num);
+                }
+            });
+        </script>
+    </body>
+</html>

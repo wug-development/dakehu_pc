@@ -1,0 +1,334 @@
+@import 'quote/public.scss';
+
+.flightlist-box{
+    @import 'quote/progressbar.scss';
+    .bookbox{
+        margin-top: 40px;
+        @import 'quote/flightsearch.scss';
+        .btn{
+            margin: 0 auto;
+        }
+    }
+    .flight-search{
+        margin-top: 20px;
+        padding-bottom: 20px;
+        .flight-search-title{
+            padding: 20px 0 20px 20px;
+            display: flex;
+            font-size: 16px;
+            color: #000;            
+            .icon-go{
+                width: 40px;
+                background: url('../images/icon_list_go.png') no-repeat;
+                background-position: center;                
+            }
+            .s{
+                font-size: 14px;
+                color: #666;
+            }
+        }
+        .flight-search-list{
+            width: 100%;
+            min-height: 260px;
+            .thead {
+                background-color: #333333;
+                color: #fff;
+                display: flex;
+                height: 40px;
+                line-height: 40px;
+                justify-content: space-around;
+                text-align: center;
+            }
+            .tbody{
+                margin-top: 10px;
+                border-top: 5px solid $pubcolor;
+                background-color: #fff;
+                .tbody-flg{
+                    min-height: 80px;
+                    line-height: 30px;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    text-align: center;
+                    box-shadow: 0 2px 4px #ededed;
+                    padding: 10px 0;
+                }                
+                .flg-flex{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .flg-company{
+                    box-sizing: border-box;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .flg-info{
+                    display: flex;
+                    .flg-info-type{
+                        color: #747474;
+                        line-height: 20px;
+                        width: 80px;
+                    }
+                    .flg-info-model{
+                        width: 100px;
+                        padding-left: 20px;
+                        box-sizing: border-box;
+                        text-align: left;
+                        > div {
+                            line-height: 20px;
+                            padding: 10px 0;
+                            span{
+                                color: #4eb0e4;
+                            }
+                        }
+                        .jixing{
+                            color: #000;
+                        }
+                    }        
+                }
+                .flg-airport{
+                    > div{
+                        padding: 5px 0;
+                        color: #000;
+                        line-height: 22px;
+                        > div{
+                            margin-bottom: 6px;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                        > span{
+                            color: #747474;
+                            span{
+                                margin: 0 10px;
+                            }                            
+                        }
+                    }
+                }
+                .flg-icon{
+                    background: url('../images/icon_list_goback.png') no-repeat;
+                    background-position: center;
+                }
+                .flg-more{
+                    div{
+                        width: 90px;
+                        height: 20px;
+                        line-height: 20px;
+                        border: 1px solid #b1b0b0;
+                        color: #b1b0b0;
+                    }
+                }
+                .flg-more.cur{
+                    div{
+                        border: 1px solid #fe7122;
+                        color: #fe7122;
+                        cursor: pointer;
+                    }
+                }
+                .flg-moneyfix{
+                    line-height: 24px;
+                    align-items: flex-start;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    .flg-money{
+                        color: #f00;
+                        font-size: 16px;
+                        font-weight: bold;
+                        span{
+                            font-size: 12px;
+                        }
+                    }
+                    .flg-fix{                        
+                        color: #b1b0b0;
+                    }
+                    .flg-moneyfix-tgq{
+                        color: #4eb0e4;
+                        cursor: pointer;
+                    }
+                }
+                .flg-handle{
+                    .flg-btn{
+                        width: 90px;
+                        padding: 6px 20px;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                    }
+                    .flg-btn-changecontent{
+                        color: #1c87ca;
+                        line-height: 20px;
+                        cursor: pointer;
+                        position: relative;
+                        padding-right: 10px;
+                    }
+                    .flg-btn-more{
+                        color: #fe7122;
+                    }
+                    .flg-btn-changecontent::after{
+                        content: ' ';
+                        position: absolute;
+                        right: -2px;
+                        top: 7px;
+                        width:0;
+                        height:0;
+                        border-width:6px 6px 0;
+                        border-style:solid;
+                        border-color:#fe7122 transparent transparent;/*灰 透明 透明 */
+                    }
+                }             
+                .flg-morelist{
+                    width: 1200px;
+                    .flg-morelist-item{
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        text-align: center;
+                        border-top: 1px dotted #ccc;
+                        padding: 10px 0;
+                    }
+                    .flg-morelist-item:first-child{
+                        border: 0;
+                    }
+                }
+                .flg-airinfo{
+                    > div {
+                        display: flex;
+                        width: 100%;
+                        text-align: left;
+                        .flg-airinfo-logo{
+                            width: 50px;
+                            padding-top: 16px;
+                        }
+                        .flg-airinfo-company{
+                            width: 100px;
+                            div{
+                                color: #000;
+                                font-size: 16px;
+                            }
+                            >span{
+                                font-size: 14px;
+                                color: #999;
+                                span{
+                                    color: #4eb0e4;
+                                }
+                            }
+                        }
+                        .flg-airinfo-site{
+                            font-size: 14px;
+                            color: #999;
+                            div{
+                                color: #000;
+                            }
+                        }
+                    }                    
+                }
+                .flg-airtime{
+                    span{
+                        margin: 0 10px;
+                        color: #999;
+                    }
+                }
+                .flg-airport{
+                    color: #000;
+                }
+                .flg-other{
+                    height: 40px;
+                    line-height: 40px;
+                    border-top: 1px dashed #999;
+                    padding-left: 80px;
+                    box-sizing: border-box;
+                    span{
+                        margin-right: 40px;
+                    }
+                }
+            }
+            .w15{
+                width: 150px;
+            }
+            .w10{
+                width: 100px;
+            }
+            .w11{
+                width: 110px;
+            }
+            .w12{
+                width: 120px;
+            }
+            .w18{
+                width: 180px;
+            }
+            .w20{
+                width: 200px;
+            }
+            .w26{
+                width: 260px;
+            }
+        }
+        .more-go-return{
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            > div {
+                width: 590px;
+                box-sizing: border-box;
+                > .grtitle{
+                    border-bottom: 1px solid $pubcolor;
+                    padding-left: 10px;
+                    box-sizing: border-box;
+                    >div{
+                        height: 20px;
+                        line-height: 20px;
+                        width: 50px;
+                        background-color: $pubcolor;
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+                > .grlist{
+                    padding: 0 10px;
+                    .gritem{
+                        padding: 5px 0;
+                        border-bottom: 1px dotted #ccc;
+                        cursor: pointer;
+                        > div {
+                            display: flex;
+                            .gritem-airmodel{
+                                text-align: center;
+                                width: 100px;
+                                >span{
+                                    color: #000;
+                                }
+                                >div {
+                                    color: #999;
+                                    span{
+                                        color: #4eb0e4;
+                                    }
+                                }
+                            }
+                            .gritem-airport{
+                                margin-left: 60px;
+                                width: 150px;
+                                text-align: center;
+                                div{
+                                    color: #000;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    white-space: nowrap;
+                                }
+                                span{
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                    .gritem:hover{
+                        background-color: #e3ebe9;
+                    }
+                }
+            }
+        }
+    }
+}

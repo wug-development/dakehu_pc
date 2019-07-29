@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>凯行网 - 大客户航班查询</title>
+        @@include('publicpage/meta.html')
+        <link rel="stylesheet" type="text/css" href="css/person.min.css"/>
+    </head>
+    <body class="person-box">
+        @@include('publicpage/header.html')
+        @@include('publicpage/menu.html', {"t": "index"})
+        @@include('publicpage/progressbar.html', {"i": 3})
+        
+        <div class="person-box-body">
+            <div class="boxwidth airinfo-box">
+                <div class="airinfo-box-title"><span class="title-icon goback">往返</span></div>
+                <div class="airinfo-box-trip">
+                    <div class="trip-title">
+                        <span class="trip-lab">去程</span>
+                        <div class="trip-timecity"><span>09-03</span><span>周日</span><span>北京</span><span class="ticon"></span><span>华盛顿</span><span class="tomany">直飞</span></div>                    
+                    </div>
+                    <ul class="trip-info">
+                        <li>
+                            <div class="air-logo"><img src="./images/icon_airlogo.png" alt=""></div>
+                            <div class="air-company">中国东方航空公司 MU5160 空客320</div>
+                            <div class="air-port">
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                                <div class="air-port-icon"></div>
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="airinfo-box-trip">
+                    <div class="trip-title">
+                        <span class="trip-lab">返程</span>
+                        <div class="trip-timecity"><span>09-03</span><span>周日</span><span>北京</span><span class="ticon"></span><span>华盛顿</span><span class="tomany">直飞</span></div>                    
+                    </div>
+                    <ul class="trip-info">
+                        <li>
+                            <div class="air-logo"><img src="./images/icon_airlogo.png" alt=""></div>
+                            <div class="air-company">中国东方航空公司 MU5160 空客320</div>
+                            <div class="air-port">
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                                <div class="air-port-icon"></div>
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="air-logo"><img src="./images/icon_airlogo.png" alt=""></div>
+                            <div class="air-company">中国东方航空公司 MU5160 空客320</div>
+                            <div class="air-port">
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                                <div class="air-port-icon"></div>
+                                <div><span class="air-port-time">09:50</span> <span>首都国际机场</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="air-rule-notice-price">
+                    <span class="rule">退改签规定</span>
+                    <span class="notice">购票须知</span>
+                    <span class="price">税金<span>60</span></span>
+                    <span class="price">服务费<span>60</span></span>
+                    <span class="price">票价<span>25000</span></span>
+                </div>
+            </div>
+
+            <div class="boxwidth whiteperson-box">
+                <div class="whiteperson-box-title">填写乘机人信息<span>请准确填写乘客信息,乘客姓名必须是拼音或英文</span></div>
+                <div class="person-from person-gj" style="display:none;">
+                    <div class="cjr">
+                        <span>乘机人：</span>
+                        <input type="text" maxlength="50" />
+                        <label class="pubbtn btn-addpreson">+ 乘机人</label>
+                        <label class="btn-person">常用乘机人</label>
+                        <div class="formnotice">例如：zhang/tiantian</div>
+                    </div>
+                    <div class="csrq">
+                        <span>出生年月日：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="hzhm">
+                        <span>护照号码：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="hzdateend">
+                        <span>护照到期日：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="cjrphone">
+                        <span>乘机人手机：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="jjlxrphone">
+                        <span>紧急人手机：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="safe">
+                        <span>购买保险：</span>
+                        <div class="form-rd">
+                            <input type="radio" name="rd_safe" id="rd_y" /><label for="rd_y">是</label>
+                            <input type="radio" name="rd_safe" id="rd_n" checked /><label for="rd_n">否</label>
+                            <span class="safe-price">保险20元</span>
+                        </div>
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="xingbie">
+                        <span>性别：</span>
+                        <div class="form-rd">
+                            <input type="radio" name="rd_sex" id="rd_nan" /><label for="rd_nan">先生</label>
+                            <input type="radio" name="rd_sex" id="rd_nv" /><label for="rd_nv">女士</label>
+                        </div>
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="moreperson-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>乘机人姓名</td>
+                                    <td>护照号码</td>
+                                    <td>乘机人手机</td>
+                                    <td>紧急人手机</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="checkbox"></div></td>
+                                    <td>王丽</td>
+                                    <td>12345678</td>
+                                    <td>13888889999</td>
+                                    <td>13888889999</td>
+                                    <td><div class="btn">修改</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="checkbox cur"></div></td>
+                                    <td><input type="text" value="王丽" maxlength="20"></td>
+                                    <td><input type="text" value="12345678" maxlength="20"></td>
+                                    <td><input type="text" value="13888889999" maxlength="20"></td>
+                                    <td><input type="text" value="13888889999" maxlength="20"></td>
+                                    <td><div class="pubbtn">保存</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="person-from person-gn">
+                    <div class="cjr">
+                        <span>乘客姓名：</span>
+                        <select name="ddl_person_type">
+                            <option value="1">成人</option>
+                            <option value="2">儿童</option>
+                        </select>
+                        <input type="text" maxlength="50" />
+                        <label class="pubbtn btn-addpreson">+ 乘机人</label>
+                    </div>
+                    <div class="csrq">
+                        <span>证件信息：</span>
+                        <select name="ddl_card" id="">
+                            <option value="1">身份证</option>
+                        </select>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="cjrphone">
+                        <span>乘机人手机：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="jjlxrphone">
+                        <span>紧急人手机：</span>
+                        <input type="text" maxlength="50" />
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="safe">
+                        <span>购买保险：</span>
+                        <div class="form-rd">
+                            <input type="radio" name="rd_safe" id="rd_y" /><label for="rd_y">是</label>
+                            <input type="radio" name="rd_safe" id="rd_n" checked /><label for="rd_n">否</label>
+                            <span class="safe-price">保险20元</span>
+                        </div>
+                        <div class="formnotice"></div>
+                    </div>
+                    <div class="moreperson-box">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>乘机人姓名</td>
+                                    <td>证件信息</td>
+                                    <td>乘机人手机</td>
+                                    <td>紧急人手机</td>
+                                    <td>操作</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="checkbox"></div></td>
+                                    <td>王丽</td>
+                                    <td>12345678</td>
+                                    <td>13888889999</td>
+                                    <td>13888889999</td>
+                                    <td><div class="btn">修改</div></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="checkbox cur"></div></td>
+                                    <td><input type="text" value="王丽" maxlength="20"></td>
+                                    <td><input type="text" value="12345678" maxlength="20"></td>
+                                    <td><input type="text" value="13888889999" maxlength="20"></td>
+                                    <td><input type="text" value="13888889999" maxlength="20"></td>
+                                    <td><div class="pubbtn">保存</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="order-content">
+                    <span>订单备注:</span>
+                    <input type="text" maxlength="500">
+                </div>
+                <div class="pubbtn submit">提交订单</div>
+            </div>
+
+            <div class="airinfo-layer">
+                <div>
+                    您已预订成功，请等待出票！
+                </div>
+            </div>
+        </div>
+
+        @@include('publicpage/footer.html')
+    </body>
+</html>

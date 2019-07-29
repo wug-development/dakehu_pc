@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>凯行网 - 订单查询</title>
+        @@include('publicpage/meta.html')
+        <link rel="stylesheet" type="text/css" href="css/orderlist.min.css"/>
+    </head>
+    <body class="orderlist-box">
+        @@include('publicpage/header.html')
+        @@include('publicpage/menu.html', {"t": "order"})
+        
+        <div class="orderlist-box-body">
+            <div class="boxwidth orderlist-box-body-white">
+                <div class="orderlist-title">订单查询</div>
+                <div class="orderlist-search-box">
+                    <div class="book-time">
+                        预订时间：
+                        <input type="text" maxlength="50" />
+                        <span>至</span>
+                        <input type="text" maxlength="50" >
+                    </div>
+                    <div class="div_mag">
+                        分公司：
+                        <select name="ddl_com" id=""></select>
+                    </div>
+                    <div class="div_mag">
+                        姓名：
+                        <input type="text" maxlength="50" >
+                    </div>
+                    <div class="div_no">
+                        <span>票号：</span>
+                        <input type="text" maxlength="50" >
+                    </div>
+                    <div class="pubbtn btn">搜索</div>
+                </div>
+                <table class="table-list" cellpadding="0" cellspacing="0">
+                    <thead>
+                        <th>订单号</th>
+                        <th>乘机人</th>
+                        <th>出发日期</th>
+                        <th>行程</th>
+                        <th>记录编号</th>
+                        <th>金额</th>
+                        <th>预订时间</th>
+                        <th>状态</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                        <tr>
+                            <td>王娜</td>
+                            <td>M妙奇艺</td>
+                            <td>13954647845</td>
+                            <td>13542546847</td>
+                            <td>2135678489412</td>
+                            <td>12345794641</td>
+                            <td>2020/5/4</td>
+                            <td>出票完成</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="boxwidth">
+                <div id="page" class="page_div"></div>
+            </div>
+        </div>
+
+        @@include('publicpage/footer.html')
+        <script type="text/javascript" src="js/lib/page.min.js"></script>
+        <script>
+            // pageMe.js 使用方法
+            $("#page").paging({
+                pageNum: 5, // 当前页面
+                totalNum: 14, // 总页码
+                totalList: 300, // 记录总数量
+                callback: function (num) { //回调函数
+                    console.log(num);
+                }
+            });
+        </script>
+    </body>
+</html>

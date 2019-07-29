@@ -1,0 +1,351 @@
+@import 'quote/public.scss';
+
+.person-box{
+    @import 'quote/progressbar.scss';
+    .person-box-body{
+        min-height: 500px;
+        padding-bottom: 20px;
+        .airinfo-box{
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 20px 0 10px 0;
+            .airinfo-box-title{
+                height: 22px;
+                line-height: 22px;
+                border-left: 2px solid $pubcolor;
+                box-sizing: border-box;
+                padding-left: 20px;
+                .title-icon{
+                    padding-left: 25px;   
+                    font-size: 22px;
+                    color: #000;             
+                }
+                .goback{
+                    background: url('../images/icon_flight_goback.png') no-repeat;
+                    background-position: left center;
+                    background-size: auto 20px;
+                }
+            }
+            .airinfo-box-trip{
+                margin-top: 25px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                .trip-title{
+                    display: flex;
+                    .trip-lab{
+                        background-color: $pubcolor;
+                        color: #fff;
+                        width: 60px;
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 16px;
+                        text-align: center;                    
+                    }
+                    .trip-timecity{
+                        margin-left: 15px;
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: bold;
+                        display: flex;
+                        span{
+                            margin: 0 5px;
+                        }
+                        .ticon{
+                            width: 23px;
+                            background: url('../images/icon_list_go.png') no-repeat;
+                            background-position: center;
+                            background-size: 23px auto;
+                        }
+                        .tomany{
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .trip-info{
+                    padding-left: 80px;
+                    box-sizing: border-box;
+                    > li{
+                        display: flex;
+                        margin-top: 20px;
+                        .air-logo{
+                            max-width: 30px;
+                            max-height: 20px;
+                            margin-right: 5px;
+                            img{
+                                max-width: 30px;
+                                max-height: 20px;
+                            }
+                        }
+                        .air-company{
+                            color: #000;
+                            font-size: 14px;
+                        }
+                        .air-port{
+                            display: flex;
+                            margin-left: 50px;
+                            line-height: 22px;
+                            height: 22px;
+                            div{
+                                margin: 0 5px;
+                                display: flex;
+                                .air-port-time{
+                                    margin-right: 10px;
+                                    font-size: 22px;
+                                }
+                            }
+                            .air-port-icon{
+                                width: 126px;
+                                background: url('../images/icon_person_goback.png') no-repeat;
+                                background-position: center;
+                                background-size: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .air-rule-notice-price{
+                margin-top: 20px;
+                text-align: right;
+                padding-top: 20px;
+                padding-right: 10px;
+                border-top: 1px dashed #ccc;
+                box-sizing: border-box;
+                span{
+                    margin-left: 25px;
+                }
+                .rule{
+                    color: #f00;
+                    padding-left: 18px;
+                    background: url('../images/icon_rule.png') no-repeat left center;
+                    background-size: 14px;
+                }
+                .notice{
+                    color: #f00;
+                    padding-left: 17px;
+                    background: url('../images/icon_notice.png') no-repeat left center;
+                    background-size: 13px;
+                }
+                .price{
+                    font-size: 22px;
+                    color: #000;
+                    font-weight: bold;
+                    span{
+                        color: #f00;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .whiteperson-box{
+            margin-top: 40px;
+            .whiteperson-box-title{
+                font-size: 22px;
+                color: #000;                
+                font-family: '黑体', sans-serif;
+                padding-left: 15px;
+                margin: 15px 0;
+                line-height: 22px;
+                height: 22px;
+                border-left: 2px solid $pubcolor;
+                span{
+                    margin-left: 20px;
+                    font-size: 14px;
+                    color: #666;
+                }
+            }
+            .person-from{
+                background-color: #fff;
+                padding: 50px 20px 20px 20px;
+                box-sizing: border-box;
+                box-shadow: 2px 2px 4px #ddd;
+                position: relative;
+                > div{
+                    display: flex;
+                    height: 65px;
+                    line-height: 36px;
+                    flex-wrap: wrap;
+                    >span{
+                        height: 36px;
+                        width: 120px;
+                        text-align: right;
+                        font-family: '黑体', sans-serif;
+                        font-size: 16px;
+                    }
+                    select{
+                        position: relative;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        width: 80px;
+                        height: 36px;
+                        line-height: 34px;
+                        box-sizing: border-box;
+                        padding-left: 10px;
+                        margin-right: 10px;
+                        cursor: pointer;
+                    }
+                    input[type='text']{
+                        position: relative;
+                        border: 1px solid #ccc;
+                        border-radius: 3px;
+                        width: 240px;
+                        height: 36px;
+                        line-height: 34px;
+                        box-sizing: border-box;
+                        padding-left: 10px;
+                    }
+                    .formnotice{
+                        font-family: '宋体', sans-serif;
+                        width: 100%;
+                        color: #f00;
+                        line-height: 12px;
+                        height: 20px;
+                        font-size: 12px;
+                        padding-left: 125px;
+                        box-sizing: border-box;
+                    }
+                    .form-rd{
+                        display: flex;
+                        height: 13px;
+                        line-height: 13px;
+                        margin-top: 11.5px;
+                        label{
+                            margin: 0 30px 0 5px;
+                            cursor: pointer;
+                        }
+                        .safe-price{
+                            color: #f00;
+                        }
+                    }
+                    .btn-addpreson{
+                        margin-left: 40px;
+                        margin-top: 3px;
+                        height: 20px;
+                        width: 80px;
+                        padding: 5px 0;
+                        border-radius: 3px;
+                    }
+                    .btn-person{
+                        margin-left: 20px;
+                        margin-top: 3px;
+                        height: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        width: 100px;
+                        padding: 5px 0;
+                        border-radius: 3px;
+                        background-color: #FE7122;
+                        color: #fff;
+                        cursor: pointer;
+                        display: none;
+                    }
+                    .btn-person:hover{
+                        background-color: #E65D0C;
+                    }
+                }
+                .moreperson-box{
+                    position: absolute;
+                    top: 100px;
+                    right: 60px;
+                    background-color: #ebebeb;
+                    height: auto;
+                    max-height: 440px;
+                    overflow-y: auto;
+                    width: 720px;
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                    table{
+                        width: 100%;
+                        line-height: 30px;
+                        td{
+                            padding-bottom: 10px;
+                            text-align: center;
+                        }
+                        input{
+                            width: 120px;
+                            margin: 0 auto;
+                            text-align: center;
+                            padding: 0;
+                        }
+                        .checkbox{
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid $pubcolor;
+                            box-sizing: border-box;
+                            background-color: #fff;
+                            cursor: pointer;
+                        }
+                        .checkbox.cur{
+                            background: url('../images/icon_dui.png') no-repeat center;
+                            background-size: 20px;
+                            background-color: $pubcolor;
+                        }
+                        .btn{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .person-gn{
+                .moreperson-box{
+                    max-height: 275px;
+                    overflow-y: auto;
+                    width: 665px;
+                    right: 25px;
+                    padding: 10px 15px;
+                }
+            }
+            .order-content{
+                background-color: #fff;
+                margin-top: 20px;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 15px;
+                box-sizing: border-box;
+                border-bottom: 1px dotted #ddd;
+                overflow: hidden;
+                input{
+                    width: 1100px;
+                }
+            }
+            .submit{
+                width: 140px;
+                height: 40px;
+                line-height: 30px;
+                margin: 25px auto;
+                border-radius: 3px;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+        }
+        .airinfo-layer{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 99;
+            background-color: rgba(0,0,0,0.3);
+            div{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 612px;
+                height: 228px;
+                margin-left: -306px;
+                margin-top: -114px;
+                padding: 60px 0 0 80px;
+                box-sizing: border-box;
+                color: #000;
+                font-family: "黑体", sans-serif;
+                font-size: 30px;
+                background: url('../images/icon_layer_bg.png') no-repeat;
+                background-position: 325px 110px;
+                background-color: #fff;
+                border-radius: 10px;
+            }
+        }
+    }
+}

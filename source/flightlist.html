@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>凯行网 - 大客户航班查询</title>
+        @@include('publicpage/meta.html')
+        <link rel="stylesheet" type="text/css" href="css/flightlist.min.css"/>
+    </head>
+    <body class="flightlist-box">
+        @@include('publicpage/header.html')
+        @@include('publicpage/menu.html', {"t": "index"})
+        @@include('publicpage/progressbar.html', {"i": 2})
+        
+        <div class="boxwidth bookbox">
+            <div class="padding">
+                <div class="menu">
+                    <div class="go cur">单程</div>
+                    <div class="return">往返</div>
+                    <div class="made">定制</div>
+                </div>
+                <div class="go-return-box" style="display: none;">
+                    <div class="out"><input type="text" class="txt" placeholder="出发地" ></div>
+                    <div class="daoda"><input type="text" class="txt" placeholder="目的地"></div>
+                    <div class="outdate"><input type="text" class="txt" placeholder="出发日期"></div>
+                    <div class="daodadate"><input type="text" class="txt" placeholder="到达日期"></div>
+                    <div class="btn">搜索</div>
+                </div>
+                <div class="made-box">
+                    <div class="text-box">
+                        <textarea id="txt_made" cols="30" rows="10" placeholder="请尽量详细描述您的航班需求，以便我们能更好为您量身设计行程！"></textarea>
+                    </div>
+                    <div class="btn">搜索</div>
+                </div>
+            </div>
+        </div>
+
+        <!--国际列表-->
+        <div class="flight-search boxwidth" style="display:none;">
+            <div class="flight-search-title"><span class="go">上海</span> <span class="icon-go"></span> <span class="mudi">北京</span> <span class="ltype s">（单程）</span> <span class="gdate s">01月06日</span></div>
+            <ul class="flight-search-list">
+                <li class="thead">
+                    <div class="w15">航空公司</div>
+                    <div class="w18">航班信息</div>
+                    <div class="w15">出发机场</div>
+                    <div class="w12"></div>
+                    <div class="w15">到达机场</div>
+                    <div class="w12"></div>
+                    <div class="w11">票价+税金</div>
+                    <div class="w12"></div>
+                </li>
+                <li class="tbody">
+                    <div class="tbody-flg">
+                        <div class="w15 flg-company flg-flex">
+                            <div><img src="./images/icon_flight_logo.png" alt=""></div>
+                            <div>中国航空</div>
+                        </div>
+                        <div class="w18 flg-info">
+                            <div class="flg-info-type flg-flex">
+                                <div>去程</div>
+                                <div>一次转机</div>
+                            </div>
+                            <div class="flg-info-model">
+                                <div>
+                                    <div class="jixing">DL168</div>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                                <div>
+                                    <div class="jixing">DL168</div>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w15 flg-airport">
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                        </div>
+                        <div class="w12 flg-icon"></div>
+                        <div class="w15 flg-airport">
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                        </div>
+                        <div class="w12 flg-more flg-flex cur">
+                            <div>更多航班</div>
+                        </div>
+                        <div class="w11 flg-moneyfix flg-flex">
+                            <div class="flg-money"><span>&yen;</span>4999</div>
+                            <div class="flg-fix">税金：&asymp;&yen;1432</div>
+                        </div>
+                        <div class="w12 flg-handle flg-flex">
+                            <div class="flg-btn pubbtn">预定</div>
+                            <div class="flg-btn-changecontent">退改签说明</div>
+                        </div>
+                    </div>
+                    <ul class="flg-morelist">
+                        <li class="flg-morelist-item">
+                            <div class="w15 flg-company flg-flex"></div>
+                            <div class="w18 flg-info">
+                                <div class="flg-info-type flg-flex">
+                                    <div>直飞</div>
+                                </div>
+                                <div class="flg-info-model">
+                                    <div>
+                                        <div class="jixing">DL168</div>
+                                        <div>机型：<span>77L</span></div>
+                                    </div>
+                                    <div>
+                                        <div class="jixing">DL168</div>
+                                        <div>机型：<span>77L</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w15 flg-airport">
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                            </div>
+                            <div class="w12 flg-icon"></div>
+                            <div class="w15 flg-airport">
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                            </div>
+                            <div class="w12"></div>
+                            <div class="w11 flg-moneyfix flg-flex">
+                                <div class="flg-money"><span>&yen;</span>4999</div>
+                                <div class="flg-fix">税金：&asymp;&yen;1432</div>
+                            </div>
+                            <div class="w12 flg-handle flg-flex">
+                                <div class="flg-btn pubbtn">预定</div>
+                            </div>
+                        </li>       
+                        <li class="flg-morelist-item">
+                            <div class="w15 flg-company flg-flex"></div>
+                            <div class="w18 flg-info">
+                                <div class="flg-info-type flg-flex">
+                                    <div>直飞</div>
+                                </div>
+                                <div class="flg-info-model">
+                                    <div>
+                                        <div class="jixing">DL168</div>
+                                        <div>机型：<span>77L</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w15 flg-airport">
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                            </div>
+                            <div class="w12 flg-icon"></div>
+                            <div class="w15 flg-airport">
+                                <div>
+                                    <div>上海浦东机场</div>
+                                    <span><span>22:00</span><span>出发</span></span>
+                                </div>
+                            </div>
+                            <div class="w12"></div>
+                            <div class="w11 flg-moneyfix flg-flex">
+                                <div class="flg-money"><span>&yen;</span>4999</div>
+                                <div class="flg-fix">税金：&asymp;&yen;1432</div>
+                            </div>
+                            <div class="w12 flg-handle flg-flex">
+                                <div class="flg-btn pubbtn">预定</div>
+                            </div>
+                        </li>                  
+                    </ul>
+                </li>
+                <li class="tbody">
+                    <div class="tbody-flg">
+                        <div class="w15 flg-company flg-flex">
+                            <div><img src="./images/icon_flight_logo.png" alt=""></div>
+                            <div>中国航空</div>
+                        </div>
+                        <div class="w18 flg-info">
+                            <div class="flg-info-type flg-flex">
+                                <div>去程</div>
+                                <div>一次转机</div>
+                            </div>
+                            <div class="flg-info-model">
+                                <div>
+                                    <div class="jixing">DL168</div>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w15 flg-airport">
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                        </div>
+                        <div class="w12 flg-icon"></div>
+                        <div class="w15 flg-airport">
+                            <div>
+                                <div>上海浦东机场</div>
+                                <span><span>22:00</span><span>出发</span></span>
+                            </div>
+                        </div>
+                        <div class="w12 flg-more flg-flex">
+                            <div>无更多航班</div>
+                        </div>
+                        <div class="w11 flg-moneyfix flg-flex">
+                            <div class="flg-money"><span>&yen;</span>4999</div>
+                            <div class="flg-fix">税金：&asymp;&yen;1432</div>
+                        </div>
+                        <div class="w12 flg-handle flg-flex">
+                            <div class="flg-btn pubbtn">预定</div>
+                            <div class="flg-btn-changecontent">退改签说明</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="more-go-return">
+                <div>
+                    <div class="grtitle"><div>去程</div></div>
+                    <ul class="grlist">
+                        <li class="gritem">
+                            <div>
+                                <div class="gritem-airmodel">
+                                    <span>DL186</span>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="gritem">
+                            <div>
+                                <div class="gritem-airmodel">
+                                    <span>DL186</span>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="gritem-airmodel">
+                                    <span>DL186</span>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="grtitle"><div>回程</div></div>
+                    <ul class="grlist">
+                        <li class="gritem">
+                            <div>
+                                <div class="gritem-airmodel">
+                                    <span>DL186</span>
+                                    <div>机型：<span>77L</span></div>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                                <div class="gritem-airport">
+                                    <div>上海浦东机场</div>
+                                    <span>起飞：21:20</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--国内列表-->
+        <div class="flight-search boxwidth">
+            <div class="flight-search-title"><span class="go">上海</span> <span class="icon-go"></span> <span class="mudi">北京</span> <span class="ltype s">（单程）</span> <span class="gdate s">01月06日</span></div>
+            <ul class="flight-search-list">
+                <li class="thead">
+                    <div class="w26">航空公司/舱位/航班号</div>
+                    <div class="w10">起降时间</div>
+                    <div class="w15">起降机场</div>
+                    <div class="w15">价格/折扣（不含税费）</div>
+                    <div class="w12"></div>
+                </li>
+                <li class="tbody">
+                    <div class="tbody-flg">
+                        <div class="w26 flg-airinfo flg-flex">
+                            <div>
+                                <div class="flg-airinfo-logo"><img src="./images/icon_flight_logo.png" alt=""></div>
+                                <div class="flg-airinfo-company">
+                                    <div>中国航空</div> 
+                                    <span>机型：<span>77L</span></span>
+                                </div>
+                                <div class="flg-airinfo-site">
+                                    <div>DL186</div>
+                                    <span>(特价经济舱位)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w10 flg-airtime flg-flex">
+                            <div><span>22:00</span><span>出发</span></div>
+                            <div><span>22:00</span><span>到达</span></div>
+                        </div>
+                        <div class="w15 flg-airport flg-flex">
+                            <div>
+                                <div>上海浦东机场</div>
+                                <div>上海浦东机场</div>
+                            </div>
+                        </div>
+                        <div class="w15 flg-moneyfix flg-flex">
+                            <div class="flg-money"><span>&yen;</span>4999</div>
+                            <div class="flg-fix">2.5折 <span class="flg-moneyfix-tgq">退改签</span></div>
+                        </div>
+                        <div class="w12 flg-handle flg-flex">
+                            <div class="flg-btn pubbtn">预定</div>
+                            <div class="flg-btn-changecontent flg-btn-more">更多航班</div>
+                        </div>
+                    </div>
+                    <ul class="flg-morelist">
+                        <li class="flg-morelist-item">
+                            <div class="w26 flg-company flg-flex"></div>
+                            <div class="w10 flg-airtime flg-flex"></div>
+                            <div class="w15 flg-airport flg-flex">
+                                <div>
+                                    <div>特价经济舱位</div>
+                                </div>
+                            </div>
+                            <div class="w15 flg-moneyfix flg-flex">
+                                <div class="flg-money"><span>&yen;</span>4999</div>
+                                <div class="flg-fix">2.5折 <span class="flg-moneyfix-tgq">退改签</span></div>
+                            </div>
+                            <div class="w12 flg-handle flg-flex">
+                                <div class="flg-btn pubbtn">预定</div>
+                            </div>
+                        </li> 
+                        <li class="flg-morelist-item">
+                            <div class="w26 flg-company flg-flex"></div>
+                            <div class="w10 flg-airtime flg-flex"></div>
+                            <div class="w15 flg-airport flg-flex">
+                                <div>
+                                    <div>特价经济舱位</div>
+                                </div>
+                            </div>
+                            <div class="w15 flg-moneyfix flg-flex">
+                                <div class="flg-money"><span>&yen;</span>4999</div>
+                                <div class="flg-fix">2.5折 <span class="flg-moneyfix-tgq">退改签</span></div>
+                            </div>
+                            <div class="w12 flg-handle flg-flex">
+                                <div class="flg-btn pubbtn">预定</div>
+                            </div>
+                        </li>                       
+                    </ul>
+                    <div class="flg-other">
+                        <span>机建+燃油：50+0元</span>
+                        <span>飞行时间：4小时20分钟</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        @@include('publicpage/footer.html')
+    </body>
+</html>
