@@ -73,11 +73,33 @@ function styleLibSassDeal () {
         .pipe(livereload());
 }
 
+/******处理字体 *************/
+function fontDeal () {   
+    return gulp.src(src.font)
+        .pipe(sass())
+        .pipe(replace(_reoption))
+        .pipe(autoprefixer({
+            browsers: ['last 20 versions'], // 重要配置 详见下面
+            cascade: true //  是否美化属性值 
+        }))
+        .pipe(cssmin())//压缩css
+        .pipe(concat('app.css'))//合并文件并重命名
+        .pipe(rename({suffix:'.min'}))//文件名加.min
+        .pipe(gulp.dest(dist.libcss))//输出css文件到指定目录
+        .pipe(livereload());
+}
+
 //复制js css
 function copy () {
-    gulp.src(['source/js/lib/swiper.min.js','source/js/lib/page.min.js','source/js/lib/layui.min.js'])
+    gulp.src(['source/js/lib/swiper.min.js','source/js/lib/page.min.js'])
         .pipe(gulp.dest(dist.libjs))
         .pipe(livereload());
+    gulp.src(['source/js/lib/layui/**'])
+            .pipe(gulp.dest('dist/js/lib/layui'))
+            .pipe(livereload());
+    gulp.src(['source/css/font/**'])
+            .pipe(gulp.dest('dist/css/font'))
+            .pipe(livereload());
     return gulp.src(['source/css/lib/swiper.min.css','source/css/lib/layui.min.css'])
         .pipe(gulp.dest(dist.libcss))
         .pipe(livereload());

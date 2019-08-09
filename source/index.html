@@ -24,10 +24,10 @@
                     <div class="made">定制</div>
                 </div>
                 <div class="go-return-box">
-                    <div class="out"><select name="modules" lay-verify="required" lay-search=""><option value="">出发地</option></select></div>
+                    <div class="out"><select name="modules" id="ddl_startCity" lay-verify="required" lay-search=""><option value="">出发地</option></select></div>
                     <div class="daoda"><select name="modules" lay-verify="required" lay-search=""><option value="">目的地</option></select></div>
-                    <div class="outdate"><input type="text" name="date" id="date" lay-verify="date" placeholder="出发日期" autocomplete="off" class="layui-input"></div>
-                    <div class="daodadate"><input type="text" class="txt" placeholder="到达日期"></div>
+                    <div class="outdate"><input type="text" name="date" id="startDate" lay-verify="date" placeholder="出发日期" autocomplete="off" class="layui-input"></div>
+                    <div class="daodadate"><input type="text" name="date" id="endDate" lay-verify="date" placeholder="到达日期" autocomplete="off" class="layui-input"></div>
                     <div class="btn"><a href="flightlist.html">搜索</a></div>
                 </div>
                 <div class="made-box">
@@ -88,7 +88,7 @@
         </div>
 
         @@include('publicpage/footer.html')
-        <script src="js/lib/layui.min.js"></script>
+        <script src="js/lib/layui/layui.min.js"></script>
         <script src="js/index.min.js"></script>
     </body>
 </html>
